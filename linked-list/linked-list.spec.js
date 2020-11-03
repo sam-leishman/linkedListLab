@@ -18,6 +18,7 @@ describe('Linked List', () => {
     it('should contain the number 5 and 7 and 13 when 5 and 7 and 13 are inserted', () => {
       linkedList.insert(5);
       linkedList.insert(7);
+      linkedList.insert(13);
       expect(linkedList.find(5)).toEqual(true);
       expect(linkedList.find(7)).toEqual(true);
       expect(linkedList.find(13)).toEqual(true);
@@ -55,7 +56,7 @@ describe('Linked List', () => {
     it('should have size of 0 when inserting one item and then removing one item', () => {
       linkedList.insert(5);
       expect(linkedList.size()).toEqual(1);
-      linkedList.remove();
+      linkedList.remove(5);
       expect(linkedList.size()).toEqual(0);
     });
   });
